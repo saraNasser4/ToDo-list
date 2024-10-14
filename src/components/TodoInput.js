@@ -1,9 +1,13 @@
 import React from 'react'
+import { FaPlus } from "react-icons/fa6";
 
 function TodoInput () {
   return (
     <div>
-        TodoInput
+        <input type='text'/>
+        <button>
+          <FaPlus />
+        </button>
     </div>
   )
 }

@@ -2,13 +2,19 @@ import React from 'react'
 import TodoCard from './TodoCard';
 
 function TodoList (props) {
-    
+  const tab = 'Comleted'
+    const filterTodosList = tab === 'All' ?
+      props.todos : 
+      tab === 'Comleted' ?
+      props.todos.filter(val => val.complete) :
+      props.todos.filter(val => !val.complete);
+
 
   return (
     <>
-        {props.todos.map((todo, index)=> {
+        {filterTodosList.map((todo, index)=> {
             return (
-                <TodoCard key={index} todoIndex={index} todo={todo} />
+                <TodoCard key={index} todo={todo} />
             )
         })}
     </>
