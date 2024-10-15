@@ -15,7 +15,7 @@ function TodoList (props) {
     <>
         {filterTodosList.map((todo, index)=> {
             return (
-                <TodoCard key={index} index={index} todo={todo} {...props}/>
+                <TodoCard key={index} index={props.todos.findIndex(val => val.input === todo.input)} todo={todo} {...props}/>
             )
         })}
     </>
