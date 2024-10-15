@@ -2,13 +2,14 @@ import React from 'react'
 import TodoCard from './TodoCard';
 
 function TodoList (props) {
-  const tab = 'All'
+  const tab = props.tabActive;
   const filterTodosList = tab === 'All' ?
-      props.todos : 
-      tab === 'Comleted' ?
-      props.todos.filter(val => val.complete) :
-      props.todos.filter(val => !val.complete);
+    props.todos : 
+    tab === 'Completed' ?
+    props.todos.filter(val => val.complete) :
+    props.todos.filter(val => !val.complete)
 
+      console.log(filterTodosList)
 
   return (
     <>

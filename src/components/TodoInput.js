@@ -16,7 +16,11 @@ function TodoInput (props) {
           className='flex-1 px-3 py-2 border-gradient border-clip-padding outline-none caret-purple-500'
         />
         <button
-          onClick={()=> value ? props.handleAddTask(value) : null}
+          onClick={()=> {
+            if (!value) {return}
+            props.handleAddTask(value)
+            setValue('')
+          }}
           className='text-white p-[10px] rounded bg-purple-400 transition-all text-xl duration-150 hover:bg-purple-600'>
           <FaPlus />
         </button>
