@@ -5,3 +5,12 @@
 html {
     box-sizing: border-box;
 }
+
+.border-gradient {
+    border-image: linear-gradient(to right, #9b59b6, #00bcd4) 1;
+}
+
+.border-clip-padding {
+    border-bottom: solid 2px;
+    border-radius: 0.375rem; 
+}

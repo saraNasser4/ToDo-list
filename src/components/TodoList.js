@@ -2,8 +2,8 @@ import React from 'react'
 import TodoCard from './TodoCard';
 
 function TodoList (props) {
-  const tab = 'Comleted'
-    const filterTodosList = tab === 'All' ?
+  const tab = 'All'
+  const filterTodosList = tab === 'All' ?
       props.todos : 
       tab === 'Comleted' ?
       props.todos.filter(val => val.complete) :
