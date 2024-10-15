@@ -9,13 +9,13 @@ function TodoList (props) {
     props.todos.filter(val => val.complete) :
     props.todos.filter(val => !val.complete)
 
-      console.log(filterTodosList)
+    
 
   return (
     <>
         {filterTodosList.map((todo, index)=> {
             return (
-                <TodoCard key={index} todo={todo} />
+                <TodoCard key={index} index={index} todo={todo} {...props}/>
             )
         })}
     </>
