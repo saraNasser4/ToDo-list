@@ -4,7 +4,7 @@ function Tabs(props){
     const tabs= ['All', 'Open', 'Completed']
     
     return (
-        <nav className='border-b border-gray-200 shadow-sm'>
+        <nav className='border-b border-gray-200 shadow-sm text-nowrap my-4'>
             {tabs.map((tab, index)=> {
                 const numOfTasks = tab === 'All' ?
                     props.todos.length : 

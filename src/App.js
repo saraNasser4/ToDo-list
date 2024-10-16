@@ -40,7 +40,7 @@ function App() {
   }, [])
   
   return (
-    <div className="max-w-[1000px] w-full">
+    <div className="max-w-[650px] lg:mx-auto m-4">
       <Header todos={todos.length} />
       <Tabs tabActive={tabActive} setTabActive={setTabActive} todos={todos} />
       <TodoInput handleAddTask={handleAddTask}/>

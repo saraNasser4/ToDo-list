@@ -7,7 +7,7 @@ function TodoInput (props) {
   
 
   return (
-    <div className='flex items-center max-w-[450px] m-4 gap-4'>
+    <div className='flex items-center m-4 gap-4 md:my-8'>
         <input 
           onChange={(e)=> handlerChange(e)}
           value={value}
